@@ -2,7 +2,7 @@ package Sub::Info;
 use strict;
 use warnings;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use Carp qw/croak/;
 use B();
