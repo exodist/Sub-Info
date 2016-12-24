@@ -9,11 +9,11 @@ ok(__PACKAGE__->can('sub_info'), "Imported sub_info");
 sub named { 'named' }
 
 no warnings 'once';
-sub empty_named { }    my $empty_named = __LINE__;
-*empty_anon = sub { }; my $empty_anon = __LINE__;
+sub empty_named { }    my $empty_named = __LINE__ + 0;
+*empty_anon = sub { }; my $empty_anon = __LINE__ + 0;
 
-sub one_line_named { 1 }    my $one_line_named = __LINE__;
-*one_line_anon = sub { 1 }; my $one_line_anon = __LINE__;
+sub one_line_named { 1 }    my $one_line_named = __LINE__ + 0;
+*one_line_anon = sub { 1 }; my $one_line_anon = __LINE__ + 0;
 
 my $multi_line_named_start = __LINE__ + 1;
 sub multi_line_named {
